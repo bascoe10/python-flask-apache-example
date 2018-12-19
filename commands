@@ -1,0 +1,172 @@
+    1  ls
+    2  sudo yum install httpd
+    3  sudo systemctl enable httpd
+    4  sudo systemctl start httpd
+    5  cd /var/www/html/
+    6  ls
+    7  cd ..
+    8  mkdir public_html
+    9  sudo mkdir public_html
+   10  ls
+   11  ls -al
+   12  sudo chown -R $USER:$USER /var/www/public_html/
+   13  ls -al
+   14  vi public_html/index.html
+   15  cd
+   16  ls
+   17  sudo cat /etc/httpd/conf/httpd.conf 
+   18  sudo vim /etc/httpd/conf.d/public_html.conf
+   19  sudo service httpd restart
+   20  sudo vim /etc/httpd/conf.d/public_html.conf
+   21  cd
+   22  mdkir wsgi_app
+   23  mkdir wsgi
+   24  cd wsgi/
+   25  vim wsgi.py
+   26  sudo vim /etc/httpd/conf.d/public_html.conf
+   27  sudo service httpd restart
+   28  sudo vim /etc/httpd/conf.d/public_html.conf
+   29  sudo service httpd restart
+   30  sudo service httpd stop
+   31  sudo service httpd start
+   32  lsof
+   33  lsof -i:80
+   34  lsof -i:8080
+   35  sudo lsof -i:8080
+   36  sudo service httpd stop
+   37  sudo lsof -i:8080
+   38  sudo service httpd start
+   39  sudo lsof -i:8080
+   40  ls
+   41  sudo vim /etc/httpd/conf.d/public_html.conf
+   42  yum install libapache2-mod-wsgi
+   43  cat /etc/*release
+   44  sudo yum install mod_wsgi
+   45  sudo systemctl restart httpd
+   46  sudo httpd -M 
+   47  sudo httpd -M | grep wsgi
+   48  mkdir /var/www/public_html/wsgi
+   49  mv wsgi.py /var/www/public_html/wsgi/
+   50  cd
+   51  sudo vim /etc/httpd/conf.d/public_html.conf
+   52  sudo systemctl restart httpd
+   53  ls
+   54  cd
+   55  cd /var/www/public_html/
+   56  ls
+   57  wsgi/
+   58  ls
+   59  cd wsgi/
+   60  ls
+   61  mkdir flask
+   62  cd flask/
+   63  ls
+   64  vi app.py
+   65  pip
+   66  sudo yum install pip
+   67  pushd ~
+   68  ls
+   69  curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+   70  python get-pip.py
+   71  sudo python get-pip.py
+   72  popd
+   73  pip
+   74  pip install flask
+   75  sudo pip install flask
+   76  vi app.py
+   77  cd ..
+   78  ls
+   79  vi wsgi.py 
+   80  cp flask/app.py ./
+   81  ls
+   82  mv wsgi.py wsgi.wsgi
+   83  sudo vim /etc/httpd/conf.d/public_html.conf
+   84  sudo systemctl restart httpd
+   85  sudo vim /etc/httpd/conf.d/public_html.conf
+   86  ls
+   87  python wsgi.wsgi 
+   88  vim wsgi.wsgi 
+   89  mv app.py myapplication.py
+   90  ls
+   91  vim wsgi.wsgi 
+   92  mv wsgi.wsgi myapplication.wsgi
+   93  sudo vim /etc/httpd/conf.d/public_html.conf
+   94  sudo systemctl restart httpd
+   95  sudo vim /etc/httpd/conf.d/public_html.conf
+   96  sudo systemctl restart httpd
+   97  rm app.pyc 
+   98  ls
+   99  cat myapplication.
+  100  cat myapplication.py 
+  101  python
+  102  ls
+  103  sudo vim /etc/httpd/conf.d/public_html.conf
+  104  sudo systemctl restart httpd
+  105  cat /var/log/httpd/error.log
+  106  sudo cat /var/log/httpd/error.log
+  107  cd /var/www/public_html/
+  108  ls
+  109  cd wsgi/
+  110  ls
+  111  cat myapplication.py
+  112  mv myapplication.wsgi app.py
+  113  sudo vim /etc/httpd/conf.d/public_html.conf
+  114  sudo systemctl restart httpd
+  115  sudo vim /etc/httpd/conf.d/public_html.conf
+  116  vim app.py 
+  117  sudo systemctl restart httpd
+  118  vim myapplication.py
+  119  uwsgi
+  120  mv app.py myapplication.wsgi
+  121  vim myapplication.
+  122  vim myapplication.wsgi 
+  123  which python
+  124  sudo systemctl restart httpd
+  125  sudo vim /etc/httpd/conf.d/public_html.conf
+  126  sudo systemctl restart httpd
+  127  sudo systemctl stop httpd
+  128  sudo systemctl start httpd
+  129  cd /var/log/httpd/
+  130  sudo cd /var/log/httpd/
+  131  ls
+  132  sudo su
+  133  sudo systemctl restart httpd
+  134  sudo su
+  135  python
+  136  ls
+  137  cat myapplication.wsgi 
+  138  python myapplication.wsgi 
+  139  mv myapplication.wsgi myapplication/
+  140  sudo mv myapplication.wsgi myapplication/
+  141  ls -al
+  142  history | grep choen
+  143  history | grep chown
+  144  sudo chown -R $USER:$USER /var/www/public_html/
+  145  ls
+  146  ls -al
+  147  pwd
+  148  sudo vim /etc/httpd/conf.d/public_html.conf
+  149  sudo systemctl restart httpd
+  150  sudo su
+  151  vim myapplication/myapplication.wsgi 
+  152  ls myapplication/
+  153  vim myapplication/myapplication.wsgi 
+  154  sudo systemctl restart httpd
+  155  ls
+  156  echo "# python-flask-apache-example" >> README.md
+  157  git init
+  158  git add README.md
+  159  git commit -m "first commit"
+  160  git remote add origin https://github.com/bascoe10/python-flask-apache-example.git
+  161  sudo yum install git
+  162  echo "# python-flask-apache-example" >> README.md
+  163  git init
+  164  git add README.md
+  165  git commit -m "first commit"
+  166  git remote add origin https://github.com/bascoe10/python-flask-apache-example.git
+  167  git push -u origin master
+  168  git add .
+  169  git status
+  170  git commit -am "application structure"
+  171  cp /etc/httpd/conf.d/public_html.conf ./apache.conf
+  172  history >> commands
